@@ -10,6 +10,19 @@ import { useRoute } from "vue-router";
     const image_url=route.params.image_url
 </script>
 <template>
+<ul class="flex items-center hidden space-x-8 lg:flex">
+        <!-- <li>
+          <router-link :to="{name:'delt',params:{id:id}}" aria-label="Our product" title="Our product"
+            class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">delete Page</router-link> -->
+            <span class="w-40 h-10 rounded-md  bg-cyan-900 hover:bg-black font-sans  text-white px-5 shadow-lg text-2xl">  <router-link :to="{name:'delt',params:{id:$route.params.id}}"> Delete pages</router-link></span>
+        <!-- <li>
+          <router-link :to="{ name:'edit'}"
+
+            class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-purple-400 hover:bg-purple-700 focus:shadow-outline focus:outline-none"
+            aria-label="Sign up" title="Sign up">Edit Page
+          </router-link>
+        </li> -->
+      </ul>
   <div v-if="error">Something went wrong...</div>
   <div v-if="loading">Loading...</div>
   

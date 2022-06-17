@@ -33,7 +33,11 @@ const routes =
     name:'delt',
     component:delt
 
-  }
+  },{
+  path:'/edit',
+  name:'edit',
+  component:edit
+},
 ];
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),

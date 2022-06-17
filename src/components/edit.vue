@@ -1,58 +1,45 @@
-<script>
-import { ref } from "vue";
-import { useMutation } from "@vue/apollo-composable";
+<script setup>
+import { ref} from "vue";
+import { useMutation,useQuery } from "@vue/apollo-composable";
 import gql from "graphql-tag";
-export default {
+import { useRoute } from "vue-router";
+const route =  useRoute();
+const title =route.params.title
+const description=route.params.description
+const image_url =route.params.image_url
+const id = route.params.id
+const { mutate: updatePage } = useMutation(
+  gql`
+    mutation updatePage($id: Int,$title: String,$description:String,$image_url:String) {
+      updatePage({ id: $id,title:$title,description:$description,image_url:$image_url }) {
+      id
+      title
+     description
+     image_url
+      }
+    }
+  `,() => ({ variables:{
+    id: id, 
+    title:title,
+    description:description,
+    image_url:image_url,
+     
+     }})
+);
 
-  setup() {
-    const route = useRoute()
-    const id=route.params.id
-    const title = route.params.title
-    const description = route.params.description
-     const image_url=route.params.image_url   
-   
-    const { mutate: updatePage } = useMutation(
-      gql`
-        mutation updatePage($id:id,$title: String, $description: String, $image_url: String) {
-          updatePage(id:$id,title: $title, description: $description, image_url: $image_url) {
-            id
-            title
-            description
-            image_url
-          }
-        }
-      `,
-      () => ({
-        variables: {
-          id:id.value,
-          title: title.value,
-          description: description.value,
-          image_url: image_url.value,
-        },
-      })
-    );
-    return {
-      id,
-      title,
-      description,
-      image_url,
-      createPage,
-    };
-  },
-};
 </script>
+<style lang=""></style>
 <template>
    <div class="container mx-auto border-solid  border-2 border-brown-600 ...">
   <div class="max-w-xl p-5 mx-auto my-10 bg-blue rounded-md shadow-sm"> 
     
     <div>
       <div class="mb-6">
-          <label for="title" title=" block mb-2 text-sm text-gray-600"
-            >page title</label
+          <label for="title" title=" block mb-2 text-sm text-gray-600">page title</label
           >
           <input v-model="title"
             
-            placeholder="{{title}}"
+            placeholder="title"
             required
             class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md  focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
           />
@@ -66,8 +53,7 @@ export default {
             
             placeholder="Enter the url of imsge here"
             required
-            class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md  focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300"
-          />
+            class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md  focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300" />
         </div>
         
         </div>
