@@ -1,7 +1,7 @@
 <template>
   <div>
 
-    <button class=" font-serif font-semibold w-40 rounded-md h-10 bg-cyan-800 hover:bg-cyan-900 active:bg-red-900 " @click="deletePage()"><span class="text-2xl text-white">Delete Page</span></button>
+    <button class=" font-serif font-semibold w-40 rounded-md h-10 bg-cyan-800 hover:bg-cyan-900 active:bg-red-900 " @click="deletePage()"><span class="text-2xl text-white"> delete ?</span></button>
   </div>
 </template>
 <script setup>

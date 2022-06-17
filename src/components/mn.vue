@@ -9,7 +9,7 @@
       <ul class="flex items-center hidden space-x-8 lg:flex">
         <li>
           <router-link :to="{name:'list'}" aria-label="Our product" title="Our product"
-            class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">preview pages</router-link>
+            class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">list of pages</router-link>
         </li>
         <li>
           <router-link :to="{ name: 'add'}"
@@ -77,11 +77,11 @@
     <div class="w-full max-w-xl px-4 mx-auto md:px-0 lg:px-8 lg:py-20 lg:max-w-screen-xl">
       <div class="mb-0 lg:max-w-lg lg:pr-8 xl:pr-6">
         <h2 class="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none md:text-center">
-          The quick, brown fox<br class="hidden md:block" />
-          jumps over a lazy dog
+          ሀሁ ሶፍትዌር ኢንጅነሪንግ እና <br class="hidden md:block" />
+          አውቶማቲክ ስራዎች
         </h2>
         <p class="mb-5 text-base text-gray-700 md:text-lg md:text-center">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae. explicabo.
+          አዲስ ሶፍትዌር ስራዎች, የተለያዩ ሶፍትዌሮች በተለያዩ ዘርፎች, አዲስ የድህረገፅ ስራዎች,   እና  አውቶማቲክ ስራዎች: ቢዝነስዎን በብለሀት እና በዘመናዊ መንገድ ይስሩ:: ለተጨማሪ ስራወች  ድህረ ገጻችን ይመልከቱ
         </p>
         <div class="mb-10 text-center md:mb-16 lg:mb-20">
           <a

@@ -39,9 +39,7 @@ export default {
           </div>
           <div class="mb-2">
           </div>
-          <p class="mb-5 text-gray-700">
-            {{page.description}}
-          </p>
+          
           <div class="flex items-center">
             <a href="/" aria-label="Author" title="Author" class="mr-3">
               <img v-bind:src="page.image_url" alt="avatar" class="object-cover w-10 h-10 rounded-full shadow-sm" />
@@ -52,7 +50,10 @@ export default {
     image_url:page.image_url,
     description:page.description
     }}"> <span aria-label="Author" title="Author" class="font-semibold text-gray-800 transition-colors duration-200 hover:text-deep-purple-accent-400">{{page.title}}</span></router-link>
-              <p class="text-sm font-medium leading-4 text-gray-600">click above to see full page</p>
+              <p class="text-sm font-medium leading-4 text-gray-600">preview this page</p>
+              <p class="mb-5 text-gray-700">
+               {{page.description}}
+          </p>
             </div>
           </div>
         </div>

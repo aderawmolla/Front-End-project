@@ -14,7 +14,9 @@ import { useRoute } from "vue-router";
         <!-- <li>
           <router-link :to="{name:'delt',params:{id:id}}" aria-label="Our product" title="Our product"
             class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400">delete Page</router-link> -->
-            <span class="w-40 h-10 rounded-md  bg-cyan-900 hover:bg-black font-sans  text-white px-5 shadow-lg text-2xl">  <router-link :to="{name:'delt',params:{id:$route.params.id}}"> Delete pages</router-link></span>
+            <span class="w-40 h-10 rounded-md  bg-cyan-900 hover:bg-black font-sans  text-white px-5 shadow-lg text-2xl aligment-right">  <router-link :to="{name:'delt',params:{id:route.params.id}}"> Delete pages</router-link></span>
+            <span class="w-40 h-10 rounded-md  bg-cyan-900 hover:bg-black font-sans  text-white px-5 shadow-lg text-2xl">  <router-link :to="{name:'edit',params:{id:'id',title:'title',description:'description',image_url:'image_url'}}"> Edit page</router-link></span>
+
         <!-- <li>
           <router-link :to="{ name:'edit'}"
 
